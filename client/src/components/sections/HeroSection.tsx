@@ -21,19 +21,19 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="#membership" 
-              className="bg-secondary hover:bg-opacity-90 text-white font-heading font-bold py-3 px-8 rounded-lg transition duration-300 text-center shadow-md"
+              className="bg-secondary hover:bg-opacity-90 text-white font-heading font-bold py-4 px-10 rounded-lg transition duration-300 text-center shadow-lg text-lg border-2 border-white"
             >
               Explore Memberships
             </a>
             <a 
               href="#contact" 
-              className="bg-white hover:bg-gray-100 text-primary font-heading font-bold py-3 px-8 rounded-lg transition duration-300 text-center shadow-md"
+              className="bg-white hover:bg-gray-100 text-primary font-heading font-bold py-4 px-10 rounded-lg transition duration-300 text-center shadow-lg text-lg"
             >
               Contact Us
             </a>
           </div>
-          <div className="mt-8 bg-secondary p-4 rounded-lg inline-block shadow-lg">
-            <p className="font-heading font-bold text-white">Brand New Member? Get your first month for $5! Contact us for details!</p>
+          <div className="mt-8 bg-secondary p-6 rounded-lg inline-block shadow-lg border-2 border-white">
+            <p className="font-heading font-bold text-white text-lg">Brand New Member? Get your first month for $5! Contact us for details!</p>
           </div>
         </div>
       </div>
