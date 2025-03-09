@@ -21,7 +21,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="#membership" 
-              className="bg-secondary hover:bg-opacity-90 text-white font-heading font-bold py-4 px-10 rounded-lg transition duration-300 text-center shadow-lg text-lg border-2 border-white"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-heading font-bold py-4 px-10 rounded-lg transition duration-300 text-center shadow-lg text-lg border-2 border-white"
             >
               Explore Memberships
             </a>
@@ -32,7 +32,7 @@ const HeroSection = () => {
               Contact Us
             </a>
           </div>
-          <div className="mt-8 bg-secondary p-6 rounded-lg inline-block shadow-lg border-2 border-white">
+          <div className="mt-8 bg-blue-600 p-6 rounded-lg inline-block shadow-lg border-2 border-white">
             <p className="font-heading font-bold text-white text-lg">Brand New Member? Get your first month for $5! Contact us for details!</p>
           </div>
         </div>
