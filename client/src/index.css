@@ -73,3 +73,25 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
+@layer components {
+  .text-dark {
+    @apply dark:text-gray-100;
+  }
+  
+  .bg-light {
+    @apply dark:bg-gray-900;
+  }
+  
+  .bg-white {
+    @apply dark:bg-gray-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply dark:text-gray-100;
+  }
+  
+  p, span, li {
+    @apply dark:text-gray-300;
+  }
+}
