@@ -30,3 +30,7 @@ start = [ "typescript-language-server", "--stdio" ]
 build = ["npm", "run", "build"]
 run = ["node", "dist/index.js"]
 deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
