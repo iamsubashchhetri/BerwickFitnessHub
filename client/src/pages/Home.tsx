@@ -11,7 +11,7 @@ import ContactSection from "@/components/sections/ContactSection";
 
 const Home = () => {
   return (
-    <div className="font-body text-dark bg-light">
+    <div className="font-body text-foreground bg-background min-h-screen">
       <Header />
       <main>
         <HeroSection />
