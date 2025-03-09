@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${
+      className={`sticky top-0 z-50 bg-white dark:bg-gray-900 transition-shadow duration-300 ${
         scrolled ? "shadow-md" : ""
       }`}
     >
@@ -44,30 +45,34 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <a href="#" className="flex items-center">
-              <h1 className="text-2xl font-heading font-bold text-primary tracking-wider">
+              <h1 className="text-2xl font-heading font-bold text-primary dark:text-blue-400 tracking-wider">
                 BERWICK FITNESS CENTRE
               </h1>
             </a>
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navItems.map((item, index) => (
-              <a 
-                key={index}
-                href={item.href} 
-                className="font-heading font-medium text-dark hover:text-primary transition duration-300"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center">
+            <nav className="flex space-x-8 mr-4">
+              {navItems.map((item, index) => (
+                <a 
+                  key={index}
+                  href={item.href} 
+                  className="font-heading font-medium text-dark dark:text-gray-200 hover:text-primary dark:hover:text-blue-400 transition duration-300"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+            <ThemeToggle />
+          </div>
           
-          {/* Mobile Navigation Toggle */}
-          <div className="md:hidden">
+          {/* Mobile Navigation Toggle and Theme Toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <button 
               onClick={toggleMenu}
-              className="text-dark hover:text-primary transition duration-300"
+              className="text-dark dark:text-gray-200 hover:text-primary dark:hover:text-blue-400 transition duration-300"
               aria-label="Toggle Menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +89,7 @@ const Header = () => {
               <a 
                 key={index}
                 href={item.href} 
-                className="font-heading font-medium text-dark hover:text-primary transition duration-300"
+                className="font-heading font-medium text-dark dark:text-gray-200 hover:text-primary dark:hover:text-blue-400 transition duration-300"
                 onClick={closeMenu}
               >
                 {item.label}
